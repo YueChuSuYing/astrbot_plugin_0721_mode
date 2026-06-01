@@ -1,0 +1,106 @@
+{
+  "state_file_path": {
+    "description": "跳蛋状态文件路径",
+    "type": "string",
+    "hint": "vibe_state.json 文件的路径。相对路径相对于插件目录解析，绝对路径直接使用",
+    "default": "vibe_state.json"
+  },
+  "webui_control_enabled": {
+    "description": "启用 WebUI 在线控制",
+    "type": "bool",
+    "hint": "开启后可通过 AstrBot WebUI 控制面板直接遥控跳蛋，无需 GUI",
+    "default": true
+  },
+  "webui_port": {
+    "description": "WebUI 控制面板端口",
+    "type": "int",
+    "hint": "WebUI 控制面板的访问端口，默认 7721。修改后需重启插件生效",
+    "default": 7721
+  },
+  "webui_password": {
+    "description": "WebUI 控制面板密码",
+    "type": "string",
+    "hint": "访问 WebUI 控制面板时需要输入的密码，留空则不设密码",
+    "default": ""
+  },
+  "inject_threshold_comfort": {
+    "description": "注入阈值（快感%）",
+    "type": "int",
+    "hint": "快感低于此值且不活跃时不注入跳蛋文本。设为0表示只要开着就注入",
+    "default": 1
+  },
+  "enable_scene": {
+    "description": "注入启用场景",
+    "type": "string",
+    "options": ["all", "private_only", "group_only"],
+    "labels": ["私信和群聊", "仅私信", "仅群聊"],
+    "hint": "控制跳蛋语气注入在哪些对话场景中生效。修改后即时生效",
+    "default": "all"
+  },
+  "speed_multiplier": {
+    "description": "快感累积倍率",
+    "type": "string",
+    "options": ["0.5", "1.0", "1.5", "2.0", "3.0"],
+    "labels": ["0.5x (慢)", "1.0x (正常)", "1.5x (快)", "2.0x (很快)", "3.0x (极快)"],
+    "hint": "控制快感值累积速度的倍率，越大越快到达高潮",
+    "default": "1.5"
+  },
+  "decay_rate": {
+    "description": "衰减速率",
+    "type": "string",
+    "options": ["0.5", "1.0", "1.5", "2.0", "3.0"],
+    "labels": ["0.5x (慢)", "1.0x (正常)", "1.5x (快)", "2.0x (很快)", "3.0x (极快)"],
+    "hint": "解锁后关闭时快感自然衰减的速度",
+    "default": "2.0"
+  },
+  "use_random_tone": {
+    "description": "随机语气描述",
+    "type": "bool",
+    "hint": "开启时每个档位从2-3条描述中随机选取，关闭时使用第一条",
+    "default": true
+  },
+  "fluctuation_enabled": {
+    "description": "随机波动",
+    "type": "bool",
+    "hint": "开启时每几秒随机±1~5%快感，模拟突然顶到敏感点或姿势变化的意外感",
+    "default": true
+  },
+  "edge_enabled": {
+    "description": "边缘控制",
+    "type": "bool",
+    "hint": "开启时快感接近临界值可能进入边缘控制状态，在临界线上下震荡后才释放高潮",
+    "default": true
+  },
+  "edge_threshold": {
+    "description": "边缘触发阈值(%)",
+    "type": "int",
+    "hint": "快感超过此值后可能触发边缘控制。默认85",
+    "default": 85
+  },
+  "tease_jump_chance": {
+    "description": "挑逗模式跳动概率",
+    "type": "string",
+    "options": ["0.05", "0.10", "0.15", "0.20", "0.30"],
+    "labels": ["5% (极少)", "10% (偶尔)", "15% (正常)", "20% (频繁)", "30% (频繁)"],
+    "hint": "挑逗模式每3秒随机跳8~15%快感的概率",
+    "default": "0.15"
+  },
+  "max_dt_cap": {
+    "description": "最大时间间隔(秒)",
+    "type": "int",
+    "hint": "防止休眠后 dt 过大导致快感暴涨，超过此值按1秒算",
+    "default": 5
+  },
+  "auto_message_enabled": {
+    "description": "启用主动消息",
+    "type": "bool",
+    "hint": "开启后跳蛋运行时机器人会主动发消息（仅私聊生效）。关闭则完全静默",
+    "default": true
+  },
+  "auto_msg_cooldown": {
+    "description": "主动消息最小间隔(秒)",
+    "type": "int",
+    "hint": "控制主动消息的发送频率，越大越安静。默认8秒",
+    "default": 8
+  }
+}

@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+vibe_state.json
+vibe_state.json.tmp

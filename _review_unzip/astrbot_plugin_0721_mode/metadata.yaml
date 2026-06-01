@@ -1,0 +1,9 @@
+name: astrbot_plugin_0721_mode
+desc: 0721模式 - 读取跳蛋状态实时影响 AI 回复语气，支持 WebUI 在线控制。
+display_name: 0721模式
+short_desc: 跳蛋状态控制 AI 回复语气，支持 WebUI 在线遥控
+help: 使用 /vibe 查看跳蛋状态，/vibe on <模式> <档位> 开启跳蛋，/vibe off 关闭跳蛋。/vibe force 强制高潮，/vibe deny 高潮否认，/vibe safeword 安全词冷却，/vibe diary 身体日记，/vibe achievements 成就。在 AstrBot WebUI 插件设置页可打开控制面板。
+version: 1.4.3
+author: 月初苏颖
+repo: ""
+astrbot_version: ">=4.5.0"

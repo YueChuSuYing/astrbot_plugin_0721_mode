@@ -1,0 +1,2 @@
+# No external Python dependencies.
+# Runtime requires AstrBot and Python standard library only.
